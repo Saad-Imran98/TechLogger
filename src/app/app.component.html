@@ -1,6 +1,8 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row color="accent">TECHLOGGER</mat-toolbar-row>
 </mat-toolbar>
-<button mat-raised-button>Home</button>
-<button mat-raised-button>Log an Issue</button>
+<button routerLink="/home" routerLinkActive="active" mat-raised-button>Home</button>
+<button mat-raised-button routerLink="/logger" routerLinkActive="active">Log an Issue</button>
 
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

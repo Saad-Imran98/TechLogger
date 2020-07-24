@@ -1,0 +1,19 @@
+{
+  "issues": [
+    {
+      "id": 1,
+      "issue": "minecraft",
+      "fix": "Restart launcher"
+    },
+    {
+      "id": 2,
+      "issue": "windows update",
+      "fix": "Told client to get a mac"
+    },
+    {
+      "id": 3,
+      "issue": "webcam broke",
+      "fix": "Disable driver in device manager"
+    }
+  ]
+}

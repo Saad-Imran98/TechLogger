@@ -5,18 +5,21 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { LoggerComponent } from './logger/logger.component';
 import {FormsModule} from '@angular/forms';
+import { LogsViewComponent } from './logs-view/logs-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoggerComponent
+    LoggerComponent,
+    LogsViewComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import {FormsModule} from '@angular/forms';
     MatButtonModule,
     AppRoutingModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

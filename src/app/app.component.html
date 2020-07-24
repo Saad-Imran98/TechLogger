@@ -2,21 +2,19 @@
   <mat-toolbar-row color="accent">TECHLOGGER</mat-toolbar-row>
 </mat-toolbar>
 <mat-tab-group mat-align-tabs="start" >
-  <mat-tab label="Home" routerLink="/home" routerLinkActive="active" mat-raised-button>
+  <mat-tab label="Home" routerLink="/home" routerLinkActive="active">
     <app-dashboard></app-dashboard>
   </mat-tab>
-  <mat-tab label="Logs" mat-raised-button routerLink="/logger" routerLinkActive="active">
-    <app-logger></app-logger>
+  <mat-tab label="Logs" routerLink="/logs" routerLinkActive="active">
+    <app-logs-view></app-logs-view>
   </mat-tab>
-  <mat-tab label="Add Log">
-    <ng-form>Form</ng-form>
+  <mat-tab label="Add Log" routerLink="/logger" routerLinkActive="active">
+    <app-logger></app-logger>
   </mat-tab>
 </mat-tab-group>
 
-<!--<button routerLink="/home" routerLinkActive="active"-->
-<!--        mat-raised-button color="accent">Home</button>-->
-<!--<button mat-raised-button routerLink="/logger"-->
-<!--        routerLinkActive="active" color="warn">Log an Issue</button>-->
+<!--<button routerLink="/home" routerLinkActive="active" mat-raised-button color="accent">Home</button>-->
+<!--<button mat-raised-button routerLink="/logger" routerLinkActive="active" color="warn">Log an Issue</button>-->
 
 <!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>
+<!--<router-outlet></router-outlet>-->

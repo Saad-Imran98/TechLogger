@@ -1,5 +1,13 @@
-.example-card {
+.logList{
+  display: inline;
+  float: left;
+  align-items: center;
+  padding-left: 20px;
+}
+.card {
   max-width: 400px;
+  min-width: 400px;
+  align-content: center;
 }
 
 .example-header-image {

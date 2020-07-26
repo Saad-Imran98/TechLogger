@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {IssueService} from '../issue.service';
+import {Issue} from '../../Issue';
 
 @Component({
   selector: 'app-logs-view',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogsViewComponent implements OnInit {
 
-  constructor() { }
+  public log: Issue[] = [];
+
+  constructor(private issueService: IssueService) { }
 
   ngOnInit(): void {
+    this.issueService.getIssues()
+      .subscribe(data => this.log = data);
   }
 
 }

@@ -14,6 +14,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoggerComponent } from './logger/logger.component';
 import {FormsModule} from '@angular/forms';
 import { LogsViewComponent } from './logs-view/logs-view.component';
+import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { LogsViewComponent } from './logs-view/logs-view.component';
     MatTabsModule,
     FormsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

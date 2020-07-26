@@ -1,1 +1,7 @@
-<h1>HOME</h1>
+<h1>Welcome</h1>
+<h2>List of all logged issues</h2>
+<mat-list *ngFor="let log of logs">
+  <mat-list-item>
+    {{log.id}}. {{log.issue}}
+  </mat-list-item>
+</mat-list>

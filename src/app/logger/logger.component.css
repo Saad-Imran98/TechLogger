@@ -1,3 +1,8 @@
 .form{
-  padding: 50px;
+  padding: 20px;
 }
+
+.addLogButton{
+  background-color: #cdcdcd;
+}
+

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Issue} from '../Issue';
+import {tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,9 @@ export class IssueService {
   }
 
   addIssue(issue: Issue): Observable<Issue> {
-    return this.http.post<Issue>(`${this.url}`, issue, this.httpOptions);
+    return this.http.post<Issue>(`${this.url}`, issue, this.httpOptions)
+      .pipe(
+        tap() // TODO: add toast service here
+      );
   }
 }

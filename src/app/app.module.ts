@@ -18,13 +18,15 @@ import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     LoggerComponent,
-    LogsViewComponent
+    LogsViewComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

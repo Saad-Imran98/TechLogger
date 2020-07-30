@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Issue} from '../Issue';
 import {tap} from 'rxjs/operators';
+import {MessageService} from './message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class IssueService {
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private messageService: MessageService) { }
 
   getIssues(): Observable<Issue[]>{
     return this.http.get<Issue[]>(this.url);
@@ -27,7 +28,7 @@ export class IssueService {
   addIssue(issue: Issue): Observable<Issue> {
     return this.http.post<Issue>(`${this.url}`, issue, this.httpOptions)
       .pipe(
-        tap() // TODO: add toast service here
+        tap(_ => this.messageService.add('')) // TODO: add toast service here
       );
   }
 }

@@ -31,4 +31,8 @@ export class LoggerComponent implements OnInit {
     });
   }
 
+  delete(): void {
+
+  }
+
 }

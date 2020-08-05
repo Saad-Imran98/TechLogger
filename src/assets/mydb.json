@@ -14,21 +14,6 @@
       "id": 3,
       "issue": "webcam broke",
       "fix": "Disable driver in device manager"
-    },
-    {
-      "issue": "issue test new",
-      "fix": "fix test new",
-      "id": 4
-    },
-    {
-      "issue": "babajan is fat",
-      "fix": "no fix",
-      "id": 5
-    },
-    {
-      "issue": "toastTest",
-      "fix": "add butter badabingbadaboom",
-      "id": 6
     }
   ]
 }

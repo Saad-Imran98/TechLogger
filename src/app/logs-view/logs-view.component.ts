@@ -13,6 +13,11 @@ export class LogsViewComponent implements OnInit {
 
   constructor(private issueService: IssueService) { }
 
+
+  deleteIssue(issue: Issue): void{
+    this.issueService.deleteIssue(issue).subscribe();
+  }
+
   ngOnInit(): void {
     this.issueService.getIssues()
       .subscribe(data => this.log = data);

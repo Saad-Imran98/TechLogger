@@ -31,4 +31,11 @@ export class IssueService {
         tap(_ => this.messageService.add('')) // TODO: add toast service here
       );
   }
+
+  deleteIssue(issue: Issue): Observable<Issue>{
+    const url = `${this.url}/${issue.id}`;
+    return this.http.delete<Issue>(url, this.httpOptions).pipe(
+      tap(_ => this.messageService.add(`Deleted Issue: ${issue.id}`)
+      ));
+  }
 }

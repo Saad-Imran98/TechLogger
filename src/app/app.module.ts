@@ -19,6 +19,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import { MessageComponent } from './message/message.component';
+import {MatTableModule} from '@angular/material/table';
+import { IssuesTableComponent } from './issues-table/issues-table.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,8 @@ import { MessageComponent } from './message/message.component';
     DashboardComponent,
     LoggerComponent,
     LogsViewComponent,
-    MessageComponent
+    MessageComponent,
+    IssuesTableComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,10 @@ import { MessageComponent } from './message/message.component';
     MatListModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

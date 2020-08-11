@@ -17,12 +17,6 @@
       "issue": "webcam broke",
       "os": "Mac",
       "fix": "Disable driver in device manager"
-    },
-    {
-      "issue": "wind test",
-      "fix": "twind asdaisndakjsdn",
-      "os": "Windows",
-      "id": 6
     }
   ]
 }

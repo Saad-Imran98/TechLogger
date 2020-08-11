@@ -10,6 +10,7 @@ import {IssueService} from '../issue.service';
 export class DashboardComponent implements OnInit {
 
   logs: Issue[] = [];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
   constructor(private issueService: IssueService) { }
 

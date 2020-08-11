@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {IssueService} from '../issue.service';
 import {Issue} from '../../Issue';
+import {DashboardComponent} from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-logger',

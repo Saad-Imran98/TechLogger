@@ -19,14 +19,10 @@
       "fix": "Disable driver in device manager"
     },
     {
-      "issue": "Adobe Green/Purple Video",
-      "fix": "Go to device manager and update intel video drivers. Do a restart and it should work. If there is no update then this issue cannot be fixed",
-      "id": 4
-    },
-    {
-      "issue": "Windows test",
-      "fix": "test",
-      "id": 5
+      "issue": "wind test",
+      "fix": "twind asdaisndakjsdn",
+      "os": "Windows",
+      "id": 6
     }
   ]
 }

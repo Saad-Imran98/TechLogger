@@ -25,9 +25,9 @@ export class LoggerComponent implements OnInit {
 
   add(issue: string, fix: string, os: string): void{
     if (!issue || !fix){return; }
-    this.issueService.addIssue({issue, fix} as Issue)
-      .subscribe(hero => {
-      this.issues.push(hero);
+    this.issueService.addIssue({issue, fix, os} as Issue)
+      .subscribe(newIssue => {
+      this.issues.push(newIssue);
     });
   }
 

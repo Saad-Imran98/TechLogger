@@ -3,7 +3,7 @@
   <h2>List of all logged issues</h2>
   <mat-list *ngFor="let log of logs">
     <mat-card>
-      {{log.id}}. {{log.issue}}
+      {{log.os}}: {{log.id}}. {{log.issue}}
     </mat-card>
   </mat-list>
  <app-issues-table></app-issues-table>

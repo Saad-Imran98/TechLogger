@@ -23,6 +23,7 @@ import {MatTableModule} from '@angular/material/table';
 import { IssuesTableComponent } from './issues-table/issues-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

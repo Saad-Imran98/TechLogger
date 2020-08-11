@@ -17,7 +17,24 @@
         </label>
       </mat-form-field>
     </p>
+    <mat-button-toggle-group #os="matButtonToggleGroup">
+      <mat-button-toggle value="Windows" aria-label="Text align left">
+        <img mat-card-sm-image src="./assets/images/windows.png">
+      </mat-button-toggle>
+      <mat-button-toggle value="MacOs" aria-label="Text align center">
+        <img mat-card-sm-image src="./assets/images/apple.png">
+      </mat-button-toggle>
+      <mat-button-toggle value="Linux" aria-label="Text align right">
+        <img mat-card-sm-image src="./assets/images/linux.png">
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+    <div>Selected value: {{os.value}}</div>
+    <button mat-button color="primary" class="addLogButton"
+            (click)="add(issue.value,fix.value,os.value); issue.value=''; fix.value=''; os.value=''" >
+      ADD
+    </button>
   </form>
-  <button mat-button color="primary" class="addLogButton"
-          (click)="add(issue.value,fix.value); issue.value=''; fix.value=''" >ADD</button>
 </div>
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+

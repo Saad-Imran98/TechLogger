@@ -23,7 +23,7 @@ export class LoggerComponent implements OnInit {
       });
   }
 
-  add(issue: string, fix: string): void{
+  add(issue: string, fix: string, os: string): void{
     if (!issue || !fix){return; }
     this.issueService.addIssue({issue, fix} as Issue)
       .subscribe(hero => {

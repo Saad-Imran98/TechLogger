@@ -3,17 +3,30 @@
     {
       "id": 1,
       "issue": "minecraft",
+      "os": "Linux",
       "fix": "Restart launcher"
     },
     {
       "id": 2,
       "issue": "windows update",
+      "os": "Windows",
       "fix": "Told client to get a mac"
     },
     {
       "id": 3,
       "issue": "webcam broke",
+      "os": "Mac",
       "fix": "Disable driver in device manager"
+    },
+    {
+      "issue": "Adobe Green/Purple Video",
+      "fix": "Go to device manager and update intel video drivers. Do a restart and it should work. If there is no update then this issue cannot be fixed",
+      "id": 4
+    },
+    {
+      "issue": "Windows test",
+      "fix": "test",
+      "id": 5
     }
   ]
 }

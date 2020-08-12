@@ -20,10 +20,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import { MessageComponent } from './message/message.component';
 import {MatTableModule} from '@angular/material/table';
-import { IssuesTableComponent } from './issues-table/issues-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -31,8 +31,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     DashboardComponent,
     LoggerComponent,
     LogsViewComponent,
-    MessageComponent,
-    IssuesTableComponent
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +50,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

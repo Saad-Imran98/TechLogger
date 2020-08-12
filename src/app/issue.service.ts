@@ -28,7 +28,7 @@ export class IssueService {
   addIssue(issue: Issue): Observable<Issue> {
     return this.http.post<Issue>(`${this.url}`, issue, this.httpOptions)
       .pipe(
-        tap(_ => this.messageService.add('')) // TODO: add toast service here
+        tap(_ => this.messageService.add(`Added new issue with OS: ${issue.os}!`))
       );
   }
 

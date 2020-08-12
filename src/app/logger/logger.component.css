@@ -1,8 +1,22 @@
+.main{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 .form{
-  padding: 20px;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 .addLogButton{
   background-color: #cdcdcd;
+}
+
+.buttons{
+  justify-items: auto;
+  background-color: bisque;
+  width: 70px;
+
 }
 

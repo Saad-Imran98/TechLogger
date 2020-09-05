@@ -1,20 +1,29 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row color="accent">TECHLOGGER</mat-toolbar-row>
+  <nav color="accent" class="toolbar">
+    TECHLOGGER
+    <span>
+      <button routerLink="/home" routerLinkActive="active" mat-raised-button >Home</button>
+      <button mat-raised-button routerLink="/logs" routerLinkActive="active">View Logs</button>
+      <button mat-raised-button routerLink="/logger" routerLinkActive="active">Log an Issue</button>
+    </span>
+
+  </nav>
 </mat-toolbar>
-<mat-tab-group mat-align-tabs="start" >
-  <mat-tab label="Home" routerLink="/home" routerLinkActive="active">
-    <app-dashboard></app-dashboard>
-  </mat-tab>
-  <mat-tab label="Edit" routerLink="/logs" routerLinkActive="active">
-    <app-logs-view></app-logs-view>
-  </mat-tab>
-  <mat-tab label="Add" routerLink="/logger" routerLinkActive="active">
-    <app-logger class="logger"></app-logger>
-  </mat-tab>
-</mat-tab-group>
 
-<!--<button routerLink="/home" routerLinkActive="active" mat-raised-button color="accent">Home</button>-->
-<!--<button mat-raised-button routerLink="/logger" routerLinkActive="active" color="warn">Log an Issue</button>-->
+<!--&lt;!&ndash;<mat-tab-group mat-align-tabs="start" >&ndash;&gt;-->
+<!--&lt;!&ndash;  <mat-tab label="Home" routerLink="/home" routerLinkActive="active">&ndash;&gt;-->
+<!--&lt;!&ndash;    <app-dashboard></app-dashboard>&ndash;&gt;-->
+<!--&lt;!&ndash;  </mat-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;  <mat-tab label="Edit" routerLink="/logs" routerLinkActive="active">&ndash;&gt;-->
+<!--&lt;!&ndash;    <app-logs-view></app-logs-view>&ndash;&gt;-->
+<!--&lt;!&ndash;  </mat-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;  <mat-tab label="Add" routerLink="/logger" routerLinkActive="active">&ndash;&gt;-->
+<!--&lt;!&ndash;    <app-logger class="logger"></app-logger>&ndash;&gt;-->
+<!--&lt;!&ndash;  </mat-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;</mat-tab-group>&ndash;&gt;-->
 
-<!--&lt;!&ndash; The routed views render in the <router-outlet>&ndash;&gt;-->
-<!--<router-outlet></router-outlet>-->
+<!-- The routed views render in the <router-outlet>-->
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
+

@@ -1,7 +1,7 @@
-button{
-  padding: 20px;
+.main{
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.logger{
-  align-items: center;
-}
+

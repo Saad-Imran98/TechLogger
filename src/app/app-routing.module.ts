@@ -4,13 +4,13 @@ import {Routes, RouterModule} from '@angular/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {LoggerComponent} from './logger/logger.component';
 import {LogsViewComponent} from './logs-view/logs-view.component';
-import {TestComponentComponent} from './test-component/test-component.component';
+
 
 const routes: Routes = [
   { path: 'home', component: DashboardComponent},
   { path: 'logger', component: LoggerComponent},
   {path: 'logs', component: LogsViewComponent},
-  {path: 'test', component: TestComponentComponent}
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
 ];
 
 @NgModule({

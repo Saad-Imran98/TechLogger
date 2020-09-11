@@ -24,7 +24,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { TestComponentComponent } from './test-component/test-component.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,6 @@ import { TestComponentComponent } from './test-component/test-component.componen
     LoggerComponent,
     LogsViewComponent,
     MessageComponent,
-    TestComponentComponent
   ],
   imports: [
     BrowserModule,

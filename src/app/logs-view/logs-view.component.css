@@ -1,16 +1,44 @@
-.logList{
-  display: inline;
-  float: left;
-  align-items: center;
-  padding-left: 20px;
+body{
+  padding: 10px;
+  margin: 0;
+  font-palette: light;
 }
-.card {
-  max-width: 400px;
-  min-width: 400px;
-  align-content: center;
+.logList{
+  /*display: inline;*/
+  /*float: left;*/
+  /*align-items: center;*/
+  /*padding-left: 20px;*/
+}
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 1rem;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+.card{
+
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 350px;
+  width: 250px;
+  min-width: 200px;
+  padding: 2rem;
+
+  border-radius: 16px;
+  background-color: #222230;
+  box-shadow: -2rem 0 3rem rgba(0,0,0,0.53);
+
+  transition: .2s;
+
 }
+
+.card:hover{
+  transform: translateY(-1rem);
+}
+.card:hover~.card {
+  transform: translateX(1rem);
+}
+/*.card:not(:first-child){*/
+/*  margin-left: -200px;*/
+/*}*/

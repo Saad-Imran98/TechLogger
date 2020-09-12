@@ -1,7 +1,11 @@
-.main{
+body{
+  background-color: #100d13;
+}
+.route{
   align-items: center;
   justify-content: center;
   width: 100%;
+  background-color: #100d13;
 }
 
 

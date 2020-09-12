@@ -24,7 +24,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class DashboardComponent implements OnInit {
 
   logs: Issue[] = [];
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['id', 'issue', 'fix', 'os'];
 
   constructor(private issueService: IssueService) { }
 

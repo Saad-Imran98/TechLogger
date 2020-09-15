@@ -1,9 +1,9 @@
-<div class="main">
-<mat-card class="form">
+<div class="main" >
+<mat-card class="form" @fade>
   <h2>Add a new log</h2>
-  <form class="example-form">
+  <form class="issueForm">
     <table class="example-full-width" ><tr>
-      <td><mat-form-field class="example-full-width">
+      <td><mat-form-field>
         <mat-label>Issue</mat-label>
         <label>
           <input matInput #issue>
@@ -11,7 +11,7 @@
       </mat-form-field></td>
     </tr></table>
     <p>
-      <mat-form-field class="example-full-width">
+      <mat-form-field>
         <mat-label>Fix</mat-label>
         <label>
           <textarea matInput placeholder="Ex. Reboot machine" #fix></textarea>
@@ -41,6 +41,5 @@
   </form>
 </mat-card>
 
-
-<div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<!--<p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>-->
 </div>

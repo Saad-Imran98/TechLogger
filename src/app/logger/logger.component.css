@@ -7,8 +7,16 @@
   margin: auto;
   width: 50%;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.issueForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .addLogButton{
   background-color: #cdcdcd;
 }
@@ -19,4 +27,6 @@
   width: 70px;
 
 }
+
+
 

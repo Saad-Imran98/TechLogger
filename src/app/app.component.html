@@ -1,15 +1,24 @@
 <body>
-<mat-toolbar color="primary">
   <nav class="toolbar">
-    TECHLOGGER
-    <span>
-      <button routerLink="/home" routerLinkActive="active" mat-raised-button >Home</button>
-      <button mat-raised-button routerLink="/logs" routerLinkActive="active">View Logs</button>
-      <button mat-raised-button routerLink="/logger" routerLinkActive="active">Log an Issue</button>
-    </span>
-
+    <h2 class="toolbarText">TECHLOGGER</h2>
+    <div class="toolbarButtonsDiv">
+      <button class="toolbarButtons" routerLink="/home" routerLinkActive="active" mat-raised-button>Home</button>
+      <button class="toolbarButtons" routerLink="/logs" routerLinkActive="active" mat-raised-button>View Logs</button>
+      <button class="toolbarButtons" routerLink="/logger" routerLinkActive="active" mat-raised-button>Log an Issue</button>
+    </div>
   </nav>
-</mat-toolbar>
+
+<!--<mat-toolbar color="primary" class="mat-toolbar">-->
+<!--  <mat-toolbar-row class="toolbarText">-->
+<!--    TECHLOGGER-->
+<!--  </mat-toolbar-row>-->
+<!--    <mat-toolbar-row class="toolbarButtons">-->
+<!--      <button routerLink="/home" routerLinkActive="active" mat-raised-button >Home</button>-->
+<!--      <button mat-raised-button routerLink="/logs" routerLinkActive="active">View Logs</button>-->
+<!--      <button mat-raised-button routerLink="/logger" routerLinkActive="active">Log an Issue</button>-->
+<!--    </mat-toolbar-row>-->
+
+<!--</mat-toolbar>-->
 
 <!--&lt;!&ndash;<mat-tab-group mat-align-tabs="start" >&ndash;&gt;-->
 <!--&lt;!&ndash;  <mat-tab label="Home" routerLink="/home" routerLinkActive="active">&ndash;&gt;-->

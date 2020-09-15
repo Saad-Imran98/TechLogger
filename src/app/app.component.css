@@ -2,10 +2,27 @@ body{
   background-color: #100d13;
 }
 .route{
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   background-color: #100d13;
 }
 
+.toolbar{
+  background-color: #693992;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.toolbarButtonsDiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.toolbarButtons{
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
 

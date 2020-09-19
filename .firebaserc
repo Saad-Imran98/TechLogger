@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "techlogger-abeb0": {
+      "hosting": {
+        "TechLogger": [
+          "techlogger-abeb0"
+        ]
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import {MessageComponent} from '../message/message.component';
 import {MessageService} from '../message.service';
 import {pipe} from 'rxjs';
+import {FirebaseIssueService} from '../firebase-issue.service';
 
 @Component({
   selector: 'app-logger',
@@ -17,7 +18,7 @@ export class LoggerComponent implements OnInit {
   messages: string[];
   issues: Issue[] = [];
   durationInMilliSeconds = 5000;
-  constructor(private issueService: IssueService, private snackBar: MatSnackBar, private messageService: MessageService) { }
+  constructor(private issueService: FirebaseIssueService, private snackBar: MatSnackBar, private messageService: MessageService) { }
 
   openSnackBar(): void {
     this.snackBar.openFromComponent(MessageComponent, {
@@ -45,10 +46,12 @@ export class LoggerComponent implements OnInit {
     if (!os){
       os = 'All';
     }
-    this.issueService.addIssue({issue, fix, os} as Issue)
-      .subscribe(newIssue => {
-      this.issues.push(newIssue);
-    });
+    const id = 7;
+    this.issueService.addIssue({id, issue, os, fix} as Issue);
+    // this.issueService.addIssue({issue, fix, os, id} as Issue)
+    //   .subscribe(newIssue => {
+    //   this.issues.push(newIssue);
+    // });
     this.openSnackBar();
   }
 

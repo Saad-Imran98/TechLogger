@@ -11,7 +11,8 @@ import {MessageService} from './message.service';
 export class IssueService {
 
   // private url = 'http://localhost:3000/issues';
-  private url = 'https://techlogger-abeb0.firebaseio.com/-MHbrNkSTqfIOhvOIhQP/issues';
+  // private footer = '';
+  private url = 'https://techlogger-abeb0.firebaseio.com/issues';
   private footer = '.json';
 
   private httpOptions = {

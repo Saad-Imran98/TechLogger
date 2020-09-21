@@ -1,5 +1,10 @@
 <div class="main">
 
+  <ul>
+    <li *ngFor="let issue of issues">
+      {{issue | json}}
+    </li>
+  </ul>
 
   <div class="table" @fade>
     <table mat-table [dataSource]="logs" class="mat-table">

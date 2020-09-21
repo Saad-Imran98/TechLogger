@@ -19,10 +19,11 @@ body{
 }
 
 .toolbarButtons{
-  width: 150px;
-  height: 50px;
+  min-width: 150px;
+  min-height: 50px;
   margin-top: 10px;
   margin-left: 10px;
   border-radius: 5px;
+  text-align: center;
 }
 

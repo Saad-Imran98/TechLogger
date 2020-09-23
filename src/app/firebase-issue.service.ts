@@ -15,6 +15,7 @@ export class FirebaseIssueService {
 
   constructor(private db: AngularFireDatabase) {
     this.issues = db.list<Issue>('/issues').valueChanges();
+
     // db.list<number>('/count').valueChanges()
     //   .subscribe(issueCount => this.issuesCount = JSON.parse(issueCount));
     // console.log(this.issuesCount);

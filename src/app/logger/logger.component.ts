@@ -18,7 +18,7 @@ export class LoggerComponent implements OnInit {
   messages: string[];
   issues: Issue[] = [];
   durationInMilliSeconds = 5000;
-  constructor(private issueService: FirebaseIssueService, private snackBar: MatSnackBar, private messageService: MessageService) { }
+  constructor(private issueService: IssueService, private snackBar: MatSnackBar, private messageService: MessageService) { }
 
   openSnackBar(): void {
     this.snackBar.openFromComponent(MessageComponent, {
@@ -47,11 +47,11 @@ export class LoggerComponent implements OnInit {
       os = 'All';
     }
     const id = 7;
-    this.issueService.addIssue({id, issue, os, fix} as Issue);
-    // this.issueService.addIssue({issue, fix, os, id} as Issue)
-    //   .subscribe(newIssue => {
-    //   this.issues.push(newIssue);
-    // });
+    // this.issueService.addIssue({issue, fix, os} as Issue);
+    this.issueService.addIssue({issue, fix, os, id} as Issue)
+      .subscribe(newIssue => {
+      this.issues.push(newIssue);
+    });
     this.openSnackBar();
   }
 

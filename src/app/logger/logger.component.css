@@ -5,8 +5,7 @@
 }
 .form{
   margin: auto;
-  width: 50%;
-  padding: 10px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,9 +21,9 @@
 }
 
 .buttons{
-  justify-items: auto;
+
   background-color: bisque;
-  width: 70px;
+
 
 }
 

@@ -10,6 +10,7 @@ import {MessageService} from './message.service';
 })
 export class IssueService {
 
+  private issueCount = 1;
   // private url = 'http://localhost:3000/issues';
   // private footer = '';
   private url = 'https://techlogger-abeb0.firebaseio.com/issues';
@@ -29,7 +30,11 @@ export class IssueService {
   }
 
   addIssue(issue: Issue): Observable<Issue> {
-    return this.http.post<Issue>(`${this.url}${this.footer}`, issue, this.httpOptions)
+    issue.id = this.issueCount;
+    this.incrementIssueCount();
+    return this.http.post<Issue>(`${this.url}${this.footer}`,
+      issue,
+      this.httpOptions)
       .pipe(
         tap(_ => this.messageService.add(`Added new issue with OS: ${issue.os}!`))
       );
@@ -40,5 +45,14 @@ export class IssueService {
     return this.http.delete<Issue>(url, this.httpOptions).pipe(
       tap(_ => this.messageService.add(`Deleted Issue: ${issue.id}`)
       ));
+  }
+  getIssueCount(): number {
+    return this.issueCount;
+  }
+  incrementIssueCount(): void {
+    this.issueCount++;
+  }
+  decrementIssueCount(): void {
+    this.issueCount--;
   }
 }

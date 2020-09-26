@@ -27,16 +27,18 @@ import {FirebaseIssueService} from '../firebase-issue.service';
 export class DashboardComponent implements OnInit {
 
   logs: Issue[] = [];
-  displayedColumns: string[] = ['id', 'issue', 'fix', 'os'];
+  displayedColumns: string[] = ['id', 'issue', 'fix', 'os', 'buttons'];
   issues: any[];
   issueCount: any;
-  constructor(private issueService: IssueService,
-              private db: AngularFireDatabase,
-              private fbIssueService: FirebaseIssueService) {}
+  constructor(private issueService: FirebaseIssueService) {}
 
   ngOnInit(): void {
-    this.fbIssueService.getIssues()
-      .subscribe(data => this.logs = data);
+    this.issueService.getIssues()
+      .subscribe(data => {
+        this.logs = data;
+      });
   }
-
+  delete(issue: Issue): void{
+    this.issueService.deleteIssue(issue);
+  }
 }

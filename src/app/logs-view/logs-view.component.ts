@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {IssueService} from '../issue.service';
 import {Issue} from '../../Issue';
 import {FirebaseIssueService} from '../firebase-issue.service';
 
@@ -13,7 +12,6 @@ export class LogsViewComponent implements OnInit {
   public log: Issue[] = [];
 
   constructor(private issueService: FirebaseIssueService) { }
-
 
   // deleteIssue(issue: Issue): void{
   //   this.issueService.deleteIssue(issue).subscribe();

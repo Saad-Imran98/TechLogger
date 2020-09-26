@@ -1,6 +1,6 @@
 
 export class Issue {
-  id: number;
+  id: string;
   issue: string;
   os: string;
   fix: string;

@@ -5,8 +5,9 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MessageComponent} from '../message/message.component';
 import {MessageService} from '../message.service';
-import {pipe} from 'rxjs';
+import {Observable, pipe} from 'rxjs';
 import {FirebaseIssueService} from '../firebase-issue.service';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-logger',
@@ -15,10 +16,13 @@ import {FirebaseIssueService} from '../firebase-issue.service';
 })
 export class LoggerComponent implements OnInit {
 
-  messages: string[];
-  issues: Issue[] = [];
+  // messages: string[];
+  // issues: Issue[] = [];
+  issues: Issue[];
   durationInMilliSeconds = 5000;
-  constructor(private issueService: IssueService, private snackBar: MatSnackBar, private messageService: MessageService) { }
+  constructor(private issueService: FirebaseIssueService,
+              private snackBar: MatSnackBar,
+              ) {}
 
   openSnackBar(): void {
     this.snackBar.openFromComponent(MessageComponent, {
@@ -31,7 +35,11 @@ export class LoggerComponent implements OnInit {
   // }
 
   ngOnInit(): void {
-    this.getIssues();
+    // this.getIssues();
+    this.issueService.getIssues()
+      .subscribe(issues => {
+        console.log(issues.pop());
+      });
   }
 
   getIssues(): void{
@@ -46,12 +54,7 @@ export class LoggerComponent implements OnInit {
     if (!os){
       os = 'All';
     }
-    const id = 7;
-    // this.issueService.addIssue({issue, fix, os} as Issue);
-    this.issueService.addIssue({issue, fix, os, id} as Issue)
-      .subscribe(newIssue => {
-      this.issues.push(newIssue);
-    });
+    this.issueService.addIssue({issue, fix, os} as Issue);
     this.openSnackBar();
   }
 

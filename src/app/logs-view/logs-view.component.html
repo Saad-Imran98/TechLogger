@@ -1,9 +1,9 @@
 <!--<body>-->
   <section class="card-list">
-    <div *ngFor="let issue of log" >
+    <div *ngFor="let issue of log; let i=index" >
       <article class="card">
-        <header class ="card-header">
-          <h1><span style="color: mediumpurple;font-weight:bold">{{issue.id}}.</span>{{issue.issue}}</h1>
+        <header class ="card-header" >
+          <h1 ><span  style="color: mediumpurple;font-weight:bold">{{i+1}}.</span>{{issue.issue}}</h1>
           <h2>OS: {{issue.os}}</h2>
           <h5>{{issue.fix}}</h5>
         </header>

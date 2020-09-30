@@ -34,6 +34,8 @@ export class DashboardComponent implements OnInit {
   issueCount: any;
   constructor(private issueService: FirebaseIssueService, private dialog: MatDialog) {}
 
+  dialogIssue: Issue = new Issue();
+
   ngOnInit(): void {
     this.issueService.getIssues()
       .subscribe(data => {
@@ -44,13 +46,22 @@ export class DashboardComponent implements OnInit {
     this.issueService.deleteIssue(issue);
   }
   openDialog(issue: Issue): void {
+
+    this.dialogIssue.issue = issue.issue;
+    this.dialogIssue.fix = issue.fix;
     const dialogRef = this.dialog.open(EditDialogComponent, {
       width: '250px',
-      data: {issue}
+      data: this.dialogIssue
     });
+
     dialogRef.afterClosed().subscribe(result => {
-      // this.issueService.updateIssue(issue);
-      console.log(`closed dialog for ${issue.id}`);
+        this.issueService.updateIssue({
+          issue: result.issue,
+          fix: result.fix,
+          os: issue.os,
+          id: issue.id
+        });
     });
   }
+
 }

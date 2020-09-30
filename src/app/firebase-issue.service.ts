@@ -13,7 +13,6 @@ export class FirebaseIssueService {
   issues: Observable<Issue[]>;
   issuesCollection: AngularFirestoreCollection<Issue>;
   issueDoc: AngularFirestoreDocument<Issue>;
-  issuesCount: number;
 
   constructor(private messageService: MessageService,
               private angularFireStore: AngularFirestore) {

@@ -22,5 +22,8 @@
   /*margin-right: 30px;*/
   padding: 10px;
 }
-
+.buttonColumn{
+  display: flex;
+  flex-direction: row;
+}
 

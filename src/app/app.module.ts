@@ -28,6 +28,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
     LoggerComponent,
     LogsViewComponent,
     MessageComponent,
+    EditDialogComponent,
   ],
   imports: [
     BrowserModule,

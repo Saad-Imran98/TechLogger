@@ -41,7 +41,7 @@
         <th mat-header-cell *matHeaderCellDef>  </th>
         <td mat-cell *matCellDef="let element" class="tableColumn">
           <div class="buttonColumn">
-            <button mat-raised-button (click)="openDialog(element)">EDIT</button><button (click)="delete(element)" mat-raised-button>DELETE</button>
+            <button mat-raised-button (click)="openDialog(element)">EDIT</button><button (click)="openDeleteDialog(element)" mat-raised-button>DELETE</button>
           </div>
         </td>
       </ng-container>

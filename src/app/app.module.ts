@@ -29,6 +29,7 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
+import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
     LogsViewComponent,
     MessageComponent,
     EditDialogComponent,
+    DeleteDialogComponent,
   ],
   imports: [
     BrowserModule,

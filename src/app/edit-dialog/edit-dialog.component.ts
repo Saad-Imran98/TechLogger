@@ -10,7 +10,7 @@ import {Issue} from '../../Issue';
 export class EditDialogComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<EditDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: Issue) {console.log(data); }
+              @Inject(MAT_DIALOG_DATA) public data: Issue) {}
 
   ngOnInit(): void {}
 

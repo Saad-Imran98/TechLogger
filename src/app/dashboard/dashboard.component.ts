@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Issue} from '../../Issue';
-import {IssueService} from '../issue.service';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {AngularFireDatabase} from '@angular/fire/database';
+import {animate, style, transition, trigger} from '@angular/animations';
 import {FirebaseIssueService} from '../firebase-issue.service';
 import {MatDialog} from '@angular/material/dialog';
 import {EditDialogComponent} from '../edit-dialog/edit-dialog.component';
+import {DeleteDialogComponent} from '../delete-dialog/delete-dialog.component';
 
 
 @Component({
@@ -32,9 +31,13 @@ export class DashboardComponent implements OnInit {
   displayedColumns: string[] = ['id', 'issue', 'fix', 'os', 'buttons'];
   issues: any[];
   issueCount: any;
-  constructor(private issueService: FirebaseIssueService, private dialog: MatDialog) {}
-
   dialogIssue: Issue = new Issue();
+  deleteIssue = false;
+
+  constructor(private issueService: FirebaseIssueService,
+              private editDialog: MatDialog,
+              private deleteDialog: MatDialog) {}
+
 
   ngOnInit(): void {
     this.issueService.getIssues()
@@ -49,19 +52,26 @@ export class DashboardComponent implements OnInit {
 
     this.dialogIssue.issue = issue.issue;
     this.dialogIssue.fix = issue.fix;
-    const dialogRef = this.dialog.open(EditDialogComponent, {
+    const dialogRef = this.editDialog.open(EditDialogComponent, {
       width: '250px',
       data: this.dialogIssue
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      if (result){
         this.issueService.updateIssue({
           issue: result.issue,
           fix: result.fix,
           os: issue.os,
           id: issue.id
         });
+      }
     });
   }
 
+  openDeleteDialog(issue: Issue): void {
+    const dialogRef = this.deleteDialog.open(DeleteDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => { console.log(result); if (result){this.delete(issue); }});
+  }
 }

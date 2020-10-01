@@ -6,7 +6,6 @@ import {MatDialog} from '@angular/material/dialog';
 import {EditDialogComponent} from '../edit-dialog/edit-dialog.component';
 import {DeleteDialogComponent} from '../delete-dialog/delete-dialog.component';
 
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -32,7 +31,6 @@ export class DashboardComponent implements OnInit {
   issues: any[];
   issueCount: any;
   dialogIssue: Issue = new Issue();
-  deleteIssue = false;
 
   constructor(private issueService: FirebaseIssueService,
               private editDialog: MatDialog,

@@ -1,45 +1,54 @@
-<div class="main" >
-<mat-card class="form">
-  <h2>Add a new log</h2>
-  <form class="issueForm">
-    <table class="example-full-width" ><tr>
-      <td><mat-form-field>
-        <mat-label>Issue</mat-label>
-        <label>
-          <input matInput #issue>
-        </label>
-      </mat-form-field></td>
-    </tr></table>
-    <p>
-      <mat-form-field>
-        <mat-label>Fix</mat-label>
-        <label>
-          <textarea matInput placeholder="Ex. Reboot machine" #fix></textarea>
-        </label>
-      </mat-form-field>
-    </p>
-    <mat-button-toggle-group class= "buttonGroup" #os="matButtonToggleGroup">
-      <mat-button-toggle value="Windows" aria-label="Text align left">
-        <img mat-card-sm-image src="./assets/images/windows.png">
-      </mat-button-toggle>
-      <mat-button-toggle value="MacOs" aria-label="Text align center">
-        <img mat-card-sm-image src="./assets/images/apple.png">
-      </mat-button-toggle>
-      <mat-button-toggle value="Linux" aria-label="Text align right">
-        <img mat-card-sm-image src="./assets/images/linux.png">
-      </mat-button-toggle>
-    </mat-button-toggle-group>
-    <div>Operating System: {{os.value}}</div>
-    <button mat-button color="primary" class="addLogButton"
-            (click)="add(issue.value,fix.value,os.value);
+<div class="main">
+  <mat-card class="form">
+    <h2>Add Log</h2>
+    <form class="issueForm">
+      <table>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Issue</mat-label>
+              <input matInput #issue>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="example-full-width">
+              <mat-form-field class="example-full-size">
+                <mat-label>Fix</mat-label>
+                <textarea class="example-full-width" matInput placeholder="Ex. Reboot machine" #fix></textarea>
+              </mat-form-field>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-button-toggle-group class="buttonGroup" #os="matButtonToggleGroup">
+              <mat-button-toggle value="Windows" aria-label="Text align left">
+                <img class="logo" mat-card-sm-image src="./assets/images/windows.png">
+              </mat-button-toggle>
+              <mat-button-toggle value="MacOs" aria-label="Text align center">
+                <img class="logo" mat-card-sm-image src="./assets/images/apple.png">
+              </mat-button-toggle>
+              <mat-button-toggle value="Linux" aria-label="Text align right">
+                <img class="logo" mat-card-sm-image src="./assets/images/linux.png">
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+          </td>
+        </tr>
+          <tr>
+            <button mat-button color="primary" class="addLogButton"
+                    (click)="add(issue.value,fix.value,os.value);
              issue.value='';
               fix.value='';
                os.value='';
-               " >
-      ADD
-    </button>
-  </form>
-</mat-card>
+               ">
+              ADD
+            </button>
+          </tr>
+      </table>
+    </form>
+  </mat-card>
 
-<!--<p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>-->
+  <!--<p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>-->
 </div>

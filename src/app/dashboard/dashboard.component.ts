@@ -5,6 +5,7 @@ import {FirebaseIssueService} from '../firebase-issue.service';
 import {MatDialog} from '@angular/material/dialog';
 import {EditDialogComponent} from '../edit-dialog/edit-dialog.component';
 import {DeleteDialogComponent} from '../delete-dialog/delete-dialog.component';
+import {MessageService} from '../message.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -31,8 +32,10 @@ export class DashboardComponent implements OnInit {
   issues: any[];
   issueCount: any;
   dialogIssue: Issue = new Issue();
+  durationInMilliSeconds = 1000;
 
   constructor(private issueService: FirebaseIssueService,
+              private messageService: MessageService,
               private editDialog: MatDialog,
               private deleteDialog: MatDialog) {}
 
@@ -64,6 +67,7 @@ export class DashboardComponent implements OnInit {
           id: issue.id
         });
       }
+      if (!this.isEqual(result, issue)){this.messageService.openSnackBar(this.durationInMilliSeconds); }
     });
   }
 
@@ -71,5 +75,13 @@ export class DashboardComponent implements OnInit {
     const dialogRef = this.deleteDialog.open(DeleteDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => { console.log(result); if (result){this.delete(issue); }});
+  }
+
+  getMessage(): string {
+    return this.messageService.getMessage();
+  }
+
+  isEqual(issue: Issue, otherIssue: Issue): boolean{
+    return otherIssue.issue === issue.issue && otherIssue.fix === issue.fix ;
   }
 }

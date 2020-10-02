@@ -1,13 +1,20 @@
 <body>
-  <nav class="toolbar">
-    <h2 class="toolbarText">TECHLOGGER</h2>
-    <div class="toolbarButtonsDiv">
-      <button class="toolbarButtons" routerLink="/home" routerLinkActive="active" mat-raised-button>Home</button>
-      <button class="toolbarButtons" routerLink="/logs" routerLinkActive="active" mat-raised-button>View Logs</button>
-      <button class="toolbarButtons" routerLink="/logger" routerLinkActive="active" mat-raised-button>Log an Issue</button>
-    </div>
-  </nav>
+<!--  <nav class="navbar navbar-dark bg dark ">-->
 
+<!--    <div class="toolbarButtonsDiv">-->
+<!--      <button class="toolbarButtons" routerLink="/home" routerLinkActive="active" mat-raised-button>Home</button>-->
+<!--      <button class="toolbarButtons" routerLink="/logs" routerLinkActive="active" mat-raised-button>View Logs</button>-->
+<!--      <button class="toolbarButtons" routerLink="/logger" routerLinkActive="active" mat-raised-button>Log an Issue</button>-->
+<!--    </div>-->
+<!--  </nav>-->
+  <mat-toolbar class = "toolbar">
+    <div>
+      <span><button class="toolbarButtons" routerLink="/home" routerLinkActive="active" mat-raised-button>Home</button></span>
+      <span><button class="toolbarButtons" routerLink="/logs" routerLinkActive="active" mat-raised-button>View Logs</button></span>
+      <span><button class="toolbarButtons" routerLink="/logger" routerLinkActive="active" mat-raised-button>Log an Issue</button></span>
+    </div>
+    <h1 class="logo" >TECHLOGGER</h1>
+  </mat-toolbar>
 <!--<mat-toolbar color="primary" class="mat-toolbar">-->
 <!--  <mat-toolbar-row class="toolbarText">-->
 <!--    TECHLOGGER-->

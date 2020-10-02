@@ -5,14 +5,29 @@ body{
   background-color: #100d13;
 }
 
+/*.toolbar{*/
+/*  background-color: #693992;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  padding: 10px;*/
+/*}*/
+
+.logo{
+  color: bisque;
+  border-style: solid;
+  border-color: bisque;
+  border-radius: 5px;
+  padding: 5px;
+}
 .toolbar{
+  justify-content: space-between;
   background-color: #693992;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
 }
 
+.toolbar>span{
+  padding: 1rem;
+}
 .toolbarButtonsDiv{
   display: flex;
   flex-direction: row;
@@ -21,9 +36,7 @@ body{
 .toolbarButtons{
   min-width: 150px;
   min-height: 50px;
-  margin-top: 10px;
-  margin-left: 10px;
   border-radius: 5px;
-  text-align: center;
+  margin-left: 3px;
 }
 

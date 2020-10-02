@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase} from '@angular/fire/database';
 import {AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection} from '@angular/fire/firestore';
 import {Issue} from '../Issue';
 import {Observable} from 'rxjs';
@@ -41,10 +40,12 @@ export class FirebaseIssueService {
   deleteIssue(issue: Issue): void {
     this.issueDoc = this.angularFireStore.doc(`issues/${issue.id}`);
     this.issueDoc.delete();
+    this.messageService.add(`Deleted Issue: ${issue.issue}!`);
   }
 
   updateIssue(issue: Issue): void{
     this.issueDoc = this.angularFireStore.doc(`issues/${issue.id}`);
     this.issueDoc.update(issue);
+    this.messageService.add(`Updated Issue: ${issue.issue}!`);
   }
 }

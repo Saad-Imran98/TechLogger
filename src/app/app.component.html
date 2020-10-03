@@ -1,48 +1,21 @@
 <body>
-<!--  <nav class="navbar navbar-dark bg dark ">-->
+<mat-toolbar class="toolbar">
+  <div>
+    <span><button class="toolbarButtons" routerLink="/home" routerLinkActive="active" mat-button>Home</button></span>
+    <span><button class="toolbarButtons" routerLink="/logs" routerLinkActive="active"
+                  mat-button>View Logs</button></span>
+    <span><button class="toolbarButtons" routerLink="/logger" routerLinkActive="active" mat-button>Log an Issue</button></span>
+  </div>
+  <h1 class="logo">TECHLOGGER</h1>
+</mat-toolbar>
 
-<!--    <div class="toolbarButtonsDiv">-->
-<!--      <button class="toolbarButtons" routerLink="/home" routerLinkActive="active" mat-raised-button>Home</button>-->
-<!--      <button class="toolbarButtons" routerLink="/logs" routerLinkActive="active" mat-raised-button>View Logs</button>-->
-<!--      <button class="toolbarButtons" routerLink="/logger" routerLinkActive="active" mat-raised-button>Log an Issue</button>-->
-<!--    </div>-->
-<!--  </nav>-->
-  <mat-toolbar class = "toolbar">
-    <div>
-      <span><button class="toolbarButtons" routerLink="/home" routerLinkActive="active" mat-raised-button>Home</button></span>
-      <span><button class="toolbarButtons" routerLink="/logs" routerLinkActive="active" mat-raised-button>View Logs</button></span>
-      <span><button class="toolbarButtons" routerLink="/logger" routerLinkActive="active" mat-raised-button>Log an Issue</button></span>
-    </div>
-    <h1 class="logo" >TECHLOGGER</h1>
-  </mat-toolbar>
-<!--<mat-toolbar color="primary" class="mat-toolbar">-->
-<!--  <mat-toolbar-row class="toolbarText">-->
-<!--    TECHLOGGER-->
-<!--  </mat-toolbar-row>-->
-<!--    <mat-toolbar-row class="toolbarButtons">-->
-<!--      <button routerLink="/home" routerLinkActive="active" mat-raised-button >Home</button>-->
-<!--      <button mat-raised-button routerLink="/logs" routerLinkActive="active">View Logs</button>-->
-<!--      <button mat-raised-button routerLink="/logger" routerLinkActive="active">Log an Issue</button>-->
-<!--    </mat-toolbar-row>-->
-
-<!--</mat-toolbar>-->
-
-<!--&lt;!&ndash;<mat-tab-group mat-align-tabs="start" >&ndash;&gt;-->
-<!--&lt;!&ndash;  <mat-tab label="Home" routerLink="/home" routerLinkActive="active">&ndash;&gt;-->
-<!--&lt;!&ndash;    <app-dashboard></app-dashboard>&ndash;&gt;-->
-<!--&lt;!&ndash;  </mat-tab>&ndash;&gt;-->
-<!--&lt;!&ndash;  <mat-tab label="Edit" routerLink="/logs" routerLinkActive="active">&ndash;&gt;-->
-<!--&lt;!&ndash;    <app-logs-view></app-logs-view>&ndash;&gt;-->
-<!--&lt;!&ndash;  </mat-tab>&ndash;&gt;-->
-<!--&lt;!&ndash;  <mat-tab label="Add" routerLink="/logger" routerLinkActive="active">&ndash;&gt;-->
-<!--&lt;!&ndash;    <app-logger class="logger"></app-logger>&ndash;&gt;-->
-<!--&lt;!&ndash;  </mat-tab>&ndash;&gt;-->
-<!--&lt;!&ndash;</mat-tab-group>&ndash;&gt;-->
-
-<!-- The routed views render in the <router-outlet>-->
 <div class="route">
   <router-outlet></router-outlet>
+  <footer>
+    <p>Saad Imran</p>
+  </footer>
 </div>
 </body>
+
 
 

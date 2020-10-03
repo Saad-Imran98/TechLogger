@@ -1,8 +1,8 @@
 body{
-  background-color: #100d13;
+  background-color: #EAE7DC;
 }
 .route{
-  background-color: #100d13;
+  background-color: #EAE7DC;
 }
 
 /*.toolbar{*/
@@ -14,16 +14,16 @@ body{
 /*}*/
 
 .logo{
-  color: bisque;
+  color: #E85a4f;
   border-style: solid;
-  border-color: bisque;
+  border-color: #E98074;
   border-radius: 5px;
   padding: 5px;
 }
 .toolbar{
   padding: 40px;
   justify-content: space-between;
-  background-color: #693992;
+  background-color: #D8C3A5;
 }
 
 .toolbar>span{
@@ -35,9 +35,18 @@ body{
 }
 
 .toolbarButtons{
+  color: #E98074;
   min-width: 150px;
   min-height: 50px;
-  border-radius: 5px;
-  margin-left: 3px;
+}
+
+.toolbarButtons:hover {
+  color: #E85a4f;
+}
+
+.footer {
+  padding: 40px;
+  justify-content: center;
+  background-color: #D8C3A5;
 }
 

@@ -1,6 +1,6 @@
 .main{
   margin: auto;
-  width: 50%;
+  /*width: 80%;*/
   padding: 10px;
 }
 .form{
@@ -19,25 +19,28 @@
 }
 .addLogButton{
   background-color: #cdcdcd;
+  margin: 10px;
 }
 
 .buttons{
-  background-color: bisque;
+  max-width: 200px;
+  height: auto;
 }
 
-.buttonGroup{
-  size: inherit;
-  object-fit: cover;
-}
+/*.buttonGroup{*/
+/*  size: inherit;*/
+/*  object-fit: cover;*/
+/*}*/
 .logo{
-  size: auto;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .example-full-width{
   width: 100%;
+  max-width: 300px;
 }
 
-.example-full-size{
-  width: 100%;
-}
+/*.example-full-size{*/
+/*  width: 100%;*/
+/*}*/

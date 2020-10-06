@@ -3,7 +3,6 @@
     <h2>Add Log</h2>
     <form class="col issueForm">
 
-
             <mat-form-field class="row example-full-width">
               <mat-label>Issue</mat-label>
               <input matInput #issue>
@@ -14,12 +13,9 @@
                 <textarea matInput placeholder="Ex. Reboot machine" #fix></textarea>
             </mat-form-field>
 
-
             <mat-button-toggle-group class="btn-group btn-group-toggle buttons" #os="matButtonToggleGroup">
               <mat-button-toggle value="Windows">
-<!--                <label class="btn">-->
                   <img class="img-fluid" src="./assets/images/windows.png">
-<!--                </label>-->
               </mat-button-toggle>
               <mat-button-toggle value="MacOs">
                 <img class="img-fluid" src="./assets/images/apple.png">
@@ -29,22 +25,6 @@
               </mat-button-toggle>
             </mat-button-toggle-group>
 
-
-<!--      <div class="btn-group btn-group-toggle" data-toggle="buttons">-->
-<!--        <label class="btn btn-secondary active" >-->
-<!--          <img class="img-fluid logo" src="./assets/images/windows.png">-->
-<!--          <input type="radio" name="options" id="option1" autocomplete="off" checked>-->
-<!--        </label>-->
-<!--        <label class="btn btn-secondary">-->
-<!--          <input type="radio" name="options" id="option2" autocomplete="off">-->
-<!--          <img class="img-fluid logo" src="./assets/images/apple.png">-->
-<!--        </label>-->
-<!--        <label class="btn btn-secondary">-->
-<!--          <input type="radio" name="options" id="option3" autocomplete="off">-->
-<!--          <img class="img-fluid logo" src="./assets/images/linux.png">-->
-<!--        </label>-->
-<!--      </div>-->
-
             <button mat-button color="primary" class="addLogButton"
                     (click)="add(issue.value,fix.value,os.value);
              issue.value='';
@@ -53,7 +33,6 @@
                ">
               ADD
             </button>
-
 
     </form>
   </mat-card>

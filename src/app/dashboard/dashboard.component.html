@@ -1,6 +1,6 @@
 <div class="main">
 
-  <div class="container" @fade>
+  <div class="table container" @fade>
 <!--    <table mat-table [dataSource]="logs" class=" table table-responsive-sm">-->
 
 <!--      &lt;!&ndash; Position Column &ndash;&gt;-->
@@ -44,7 +44,7 @@
 <!--    </table>-->
 
     <table class="row table table-responsive">
-      <thead>
+      <thead class="thead-light">
       <tr class="col">
         <th scope="col">ID</th>
         <th scope="col">Issue</th>
@@ -55,14 +55,14 @@
       </thead>
       <tbody class="">
       <tr class="" *ngFor="let log of logs; let i = index">
-        <th class="text-center text-justify" scope="col">{{i+1}}</th>
+        <th class="text-center text-justify" scope="row">{{i+1}}</th>
         <td class="col ">{{log.issue}}</td>
         <td class="col text-justify">{{log.fix}}</td>
         <td class="col text-justify">{{log.os}}</td>
         <td class="col text-justify">
-          <div class="col button container">
-            <button class="text-justify text-center col" mat-raised-button (click)="openDialog(log)">EDIT</button>
-            <button class="text-justify text-center col" (click)="openDeleteDialog(log)" mat-raised-button>DELETE</button>
+          <div class="col container justify-content-center">
+            <button class="tableButton text-justify text-center col"  mat-button (click)="openDialog(log)">EDIT</button>
+            <button class="text-justify text-center col" mat-button (click)="openDeleteDialog(log)" >DELETE</button>
           </div>
         </td>
       </tr>

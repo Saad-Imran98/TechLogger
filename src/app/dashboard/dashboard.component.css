@@ -4,10 +4,14 @@
 /*  padding: 15px;*/
 /*}*/
 
-/*.table{*/
+.tableDiv{
+  border-radius: 15px;
+}
+.table{
 
-/*  border-radius: 15px;*/
-/*}*/
+  border-radius: 15px;
+  padding-top: 15px;
+}
 
 /*.tableColumn{*/
 /*  width: 10%;*/

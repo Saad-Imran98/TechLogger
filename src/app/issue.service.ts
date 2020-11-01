@@ -18,7 +18,7 @@ export class IssueService {
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  constructor(private http: HttpClient, private messageService: MessageService) { }
+  constructor(private http: HttpClient, private messageService: MessageService) {}
 
   getIssues(): Observable<Issue[]>{
     return this.http.get<Issue[]>(`${this.url}${this.footer}`);
@@ -41,4 +41,5 @@ export class IssueService {
       tap(_ => this.messageService.add(`Deleted Issue: ${issue.id}`)
       ));
   }
+
 }

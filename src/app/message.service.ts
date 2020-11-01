@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {MessageComponent} from './message/message.component';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +12,20 @@ export class MessageService {
   add(message: string): void{
     this.messages.push(message);
   }
-  getMessages(): string[]{
-    return this.messages;
+
+  getMessage(): string{
+    return this.messages.pop();
   }
+
   clear(): void{
     this.messages = [];
   }
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) {}
 
+  openSnackBar(durationInMilliSeconds: number): void {
+    this.snackBar.openFromComponent(MessageComponent, {
+      duration: durationInMilliSeconds
+    });
+  }
 }

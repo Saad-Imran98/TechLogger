@@ -1,34 +1,11 @@
-<!--<body>-->
-  <section class="card-list">
-    <div *ngFor="let issue of log" >
+ <section class="container card-list">
+    <div *ngFor="let issue of log; let i=index" >
       <article class="card">
-        <header class ="card-header">
-          <h1><span style="color: mediumpurple;font-weight:bold">{{issue.id}}.</span>{{issue.issue}}</h1>
+        <header  >
+          <h1 ><span  style="color: mediumpurple;font-weight:bold">{{i+1}}.</span>{{issue.issue}}</h1>
           <h2>OS: {{issue.os}}</h2>
           <h5>{{issue.fix}}</h5>
         </header>
       </article>
     </div>
   </section>
-<!--</body>-->
-
-<!--<div>-->
-<!--  <ul class="logList" *ngFor="let issue of log">-->
-<!--    <mat-list-item>-->
-<!--      <mat-card class="card">-->
-<!--        <mat-card-header>-->
-<!--          <mat-card-title>{{issue.id}}. {{issue.issue}}</mat-card-title>-->
-<!--          <mat-card-subtitle>OS: {{issue.os}}</mat-card-subtitle>-->
-<!--        </mat-card-header>-->
-<!--        <mat-card-content>-->
-<!--          <p><u>Fix</u></p>-->
-<!--          <p [innerText]="issue.fix"></p>-->
-<!--        </mat-card-content>-->
-<!--        <mat-card-actions>-->
-<!--          <button mat-button>EDIT</button>-->
-<!--          <button (click)="deleteIssue(issue)" mat-button >DELETE</button>-->
-<!--        </mat-card-actions>-->
-<!--      </mat-card>-->
-<!--    </mat-list-item>-->
-<!--  </ul>-->
-<!--</div>-->

@@ -1,29 +1,50 @@
-body{
-  background-color: #100d13;
-}
 .route{
-  background-color: #100d13;
+  background-color: #EAE7DC;
 }
 
+/*.toolbar{*/
+/*  background-color: #693992;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  padding: 10px;*/
+/*}*/
+
+.logo{
+  color: #E85a4f;
+  border-style: solid;
+  border-color: #E98074;
+  border-radius: 5px;
+  padding: 5px;
+}
 .toolbar{
-  background-color: #693992;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
+  /*padding: 40px;*/
+  /*justify-content: space-between;*/
+  background-color: #D8C3A5;
+
 }
 
-.toolbarButtonsDiv{
-  display: flex;
-  flex-direction: row;
-}
+/*.toolbar>span{*/
+/*  padding: 1rem;*/
+/*}*/
+/*.toolbarButtonsDiv{*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*}*/
 
 .toolbarButtons{
-  min-width: 150px;
-  min-height: 50px;
-  margin-top: 10px;
-  margin-left: 10px;
-  border-radius: 5px;
-  text-align: center;
+  color: #E98074;
+  /*min-width: 150px;*/
+  /*min-height: 50px;*/
+}
+
+.toolbarButtons:hover {
+  color: #E85a4f;
+}
+
+.footer {
+  padding: 40px;
+  justify-content: center;
+  background-color: #D8C3A5;
 }
 
